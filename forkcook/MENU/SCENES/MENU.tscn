@@ -1,0 +1,240 @@
+[gd_scene load_steps=18 format=3 uid="uid://d2nkn7o5k1eoi"]
+
+[ext_resource type="Shader" uid="uid://dxx1ui8vhkjgb" path="res://MENU/SHADER/title.gdshader" id="1_5nwuf"]
+[ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="2_80brt"]
+[ext_resource type="Shader" uid="uid://dhvtdl46jy5ej" path="res://MENU/SHADER/vignette.gdshader" id="3_7rwve"]
+[ext_resource type="Script" uid="uid://humfw1ttryty" path="res://MENU/SCRIPTS/drop_manager.gd" id="3_80brt"]
+[ext_resource type="Script" uid="uid://dvglyv8n0t8ui" path="res://MENU/SCRIPTS/parallax_background.gd" id="4_e81bx"]
+[ext_resource type="Texture2D" uid="uid://be3p1a8k3vg38" path="res://MENU/ASSETS/BGs/fork collect.png" id="5_x3i7w"]
+[ext_resource type="Texture2D" uid="uid://dydmu0nmsyg8m" path="res://MENU/ASSETS/BGs/border.png" id="6_cyf0k"]
+[ext_resource type="Texture2D" uid="uid://bs5mc7bimroy" path="res://MENU/ASSETS/BGs/collection.png" id="7_e81bx"]
+[ext_resource type="Texture2D" uid="uid://cxp3nwbpoc05q" path="res://MENU/ASSETS/BUTTONS/button.png" id="8_7rwve"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_35yhv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cswfe"]
+shader = ExtResource("1_5nwuf")
+shader_parameter/wave_amplitude = 15.0
+shader_parameter/wave_frequency = 140.0
+shader_parameter/movement_speed = 0.0
+shader_parameter/movement_amplitude = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_xmf8c"]
+font = ExtResource("2_80brt")
+font_size = 192
+font_color = Color(1, 0.921569, 0.498039, 1)
+outline_size = 36
+shadow_size = 61
+shadow_color = Color(0.168627, 0.168627, 0.168627, 0.203922)
+shadow_offset = Vector2(4.605, 4.44)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w78xv"]
+shader = ExtResource("3_7rwve")
+shader_parameter/vignette_intensity = 0.865
+shader_parameter/vignette_opacity = 0.084
+shader_parameter/vignette_rgb = Color(0.769352, 0.9821, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e81bx"]
+font = ExtResource("2_80brt")
+font_size = 64
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e81bx"]
+size = Vector2(966.672, 301.545)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e81bx"]
+texture = ExtResource("8_7rwve")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7rwve"]
+font = ExtResource("2_80brt")
+font_size = 48
+font_color = Color(0.982343, 0.982342, 0.982342, 1)
+outline_size = 9
+outline_color = Color(0.443137, 0.333333, 0.239216, 0.580392)
+
+[node name="MENU" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TITLE" type="Control" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_35yhv")
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 960.0
+offset_top = 300.0
+offset_right = 960.0
+offset_bottom = 300.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="TITLE"]
+material = SubResource("ShaderMaterial_cswfe")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.5
+offset_top = -105.0
+offset_right = 506.5
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fork ColLect"
+label_settings = SubResource("LabelSettings_xmf8c")
+horizontal_alignment = 1
+
+[node name="TITLE2" type="Control" parent="."]
+material = SubResource("ShaderMaterial_35yhv")
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 960.0
+offset_top = 300.0
+offset_right = 960.0
+offset_bottom = 300.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="TITLE2"]
+material = SubResource("ShaderMaterial_cswfe")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.5
+offset_top = -105.0
+offset_right = 506.5
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fork Cook"
+label_settings = SubResource("LabelSettings_xmf8c")
+horizontal_alignment = 1
+
+[node name="DropManager" type="Node" parent="."]
+script = ExtResource("3_80brt")
+
+[node name="DropTimer" type="Timer" parent="DropManager"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Vignette" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_w78xv")
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(10, 10)
+scroll_ignore_camera_zoom = true
+script = ExtResource("4_e81bx")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1920, 1080)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("5_x3i7w")
+
+[node name="Border" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.623529)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_cyf0k")
+
+[node name="Collection" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 62.0
+offset_right = 2002.0
+offset_bottom = 1142.0
+texture = ExtResource("7_e81bx")
+
+[node name="Label" type="Label" parent="Collection"]
+layout_mode = 0
+offset_left = 1455.0
+offset_top = 935.0
+offset_right = 1822.0
+offset_bottom = 1040.0
+rotation = -0.31509
+text = "ColLection !"
+label_settings = SubResource("LabelSettings_e81bx")
+
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
+position = Vector2(82, 62)
+rotation = 0.00656851
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1593.95, 1004.01)
+rotation = -0.324318
+shape = SubResource("RectangleShape2D_e81bx")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+offset_left = 810.0
+offset_top = 600.0
+offset_right = 1110.0
+offset_bottom = 710.0
+pivot_offset = Vector2(150, 55)
+theme_override_styles/normal = SubResource("StyleBoxTexture_e81bx")
+
+[node name="Label" type="Label" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "play"
+label_settings = SubResource("LabelSettings_7rwve")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeaderboardButton" type="Button" parent="."]
+layout_mode = 1
+offset_left = 771.0
+offset_top = 733.0
+offset_right = 1152.0
+offset_bottom = 840.0
+pivot_offset = Vector2(150, 55)
+theme_override_styles/normal = SubResource("StyleBoxTexture_e81bx")
+
+[node name="Label" type="Label" parent="LeaderboardButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "leaderboard"
+label_settings = SubResource("LabelSettings_7rwve")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="DropManager/DropTimer" to="DropManager" method="_on_drop_timer_timeout"]
