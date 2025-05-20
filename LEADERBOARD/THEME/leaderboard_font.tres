@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://duqpuwm63qt2c"]
+
+[ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="1_mefy8"]
+
+[resource]
+font = ExtResource("1_mefy8")
+font_size = 32

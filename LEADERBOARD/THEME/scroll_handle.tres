@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cq40utf4ilc5f"]
+
+[ext_resource type="Texture2D" uid="uid://be06esvgkc36j" path="res://LEADERBOARD/ASSETS/BUTTON/scroll_handle.png" id="1_3nk4j"]
+
+[resource]
+texture = ExtResource("1_3nk4j")
+expand_margin_left = 14.0
+expand_margin_top = 14.0
+expand_margin_right = 14.0
+expand_margin_bottom = 14.0
