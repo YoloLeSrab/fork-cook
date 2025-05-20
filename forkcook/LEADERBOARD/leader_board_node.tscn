@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://btu5uwminboh"]
+
+[ext_resource type="Script" uid="uid://cm1uyf67gkrou" path="res://LEADERBOARD/leader_board_node.gd" id="1_lh8i8"]
+[ext_resource type="Texture2D" uid="uid://chyqvo3m630aa" path="res://LEADERBOARD/ASSETS/ELEMENTS/LeaderboardNode.png" id="2_p4vgq"]
+[ext_resource type="LabelSettings" uid="uid://duqpuwm63qt2c" path="res://LEADERBOARD/THEME/leaderboard_font.tres" id="3_p4vgq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lh8i8"]
+bounce = 0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4vgq"]
+size = Vector2(510, 127)
+
+[node name="LeaderBoardNode" type="RigidBody2D"]
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_lh8i8")
+angular_damp = 2.0
+script = ExtResource("1_lh8i8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -13.75)
+texture = ExtResource("2_p4vgq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -253.5
+offset_top = -48.5
+offset_right = -253.5
+offset_bottom = -48.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="margin_begin" type="ColorRect" parent="Sprite2D/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="rank" type="Label" parent="Sprite2D/HBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("3_p4vgq")
+
+[node name="margin_begin2" type="ColorRect" parent="Sprite2D/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="name" type="Label" parent="Sprite2D/HBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("3_p4vgq")
+
+[node name="margin_middle" type="ColorRect" parent="Sprite2D/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="score" type="Label" parent="Sprite2D/HBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("3_p4vgq")
+
+[node name="margin_end" type="ColorRect" parent="Sprite2D/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_p4vgq")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(500, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
