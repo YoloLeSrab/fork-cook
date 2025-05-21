@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="6_yb5i1"]
 [ext_resource type="Texture2D" uid="uid://bgiox6m3q5t30" path="res://LEADERBOARD/ASSETS/BUTTON/button.png" id="8_jcnf2"]
 [ext_resource type="Texture2D" uid="uid://drgqys3jlltu1" path="res://LEADERBOARD/ASSETS/BUTTON/button_hover.png" id="10_kb1wg"]
-[ext_resource type="Texture2D" uid="uid://dsyg8vnuifbcu" path="res://LEADERBOARD/ASSETS/DECOR/Border2.png" id="10_rnqp8"]
+[ext_resource type="Texture2D" uid="uid://c8alowpnlun2u" path="res://LEADERBOARD/ASSETS/DECOR/Border2Soft.png" id="10_rnqp8"]
 [ext_resource type="LabelSettings" uid="uid://duqpuwm63qt2c" path="res://LEADERBOARD/THEME/leaderboard_font.tres" id="11_spgon"]
 [ext_resource type="Texture2D" uid="uid://ewvhkg4n735f" path="res://LEADERBOARD/ASSETS/BUTTON/scroll_line.png" id="13_rnqp8"]
 [ext_resource type="Texture2D" uid="uid://be06esvgkc36j" path="res://LEADERBOARD/ASSETS/BUTTON/scroll_handle.png" id="14_aglnf"]
