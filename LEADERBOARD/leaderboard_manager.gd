@@ -10,8 +10,8 @@ var scores = [["tfiette", "1234567890"],
 ["ramahrez", "123456"],
 ["pfranke", "12345"],
 ["mlemerci", "1234"],
-#["jle-doua", "123"],
-#["albaud", "12"],
+["jle-doua", "123"],
+["albaud", "12"],
 ["sakerken", "1"]]
 
 func _ready() -> void:

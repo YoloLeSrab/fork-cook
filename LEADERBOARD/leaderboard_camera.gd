@@ -2,7 +2,7 @@ extends Camera2D
 @onready var scroll_bar = $CanvasLayer/ScrollBar
 
 const SCROLL_STRENGTH = 80.0
-const CAMERA_LIMIT = 2000
+const CAMERA_LIMIT = 20000
 
 var target_position : Vector2
 var lerp_speed := 20.0

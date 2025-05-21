@@ -8,11 +8,12 @@
 bounce = 0.71
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4vgq"]
-size = Vector2(510, 127)
+size = Vector2(510, 100.5)
 
 [node name="LeaderBoardNode" type="RigidBody2D"]
-mass = 0.4
+mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_lh8i8")
+gravity_scale = 0.6
 angular_damp = 2.0
 script = ExtResource("1_lh8i8")
 
@@ -67,7 +68,7 @@ layout_mode = 2
 color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -13.5)
+position = Vector2(1, -13.25)
 shape = SubResource("RectangleShape2D_p4vgq")
 
 [node name="Button" type="Button" parent="."]

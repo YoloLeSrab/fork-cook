@@ -1,7 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://rdhte0vtjf3u"]
+[gd_scene load_steps=26 format=3 uid="uid://rdhte0vtjf3u"]
 
 [ext_resource type="Texture2D" uid="uid://rkg4lb5dbucj" path="res://LEADERBOARD/ASSETS/DECOR/BackgroundParalax.png" id="1_jcnf2"]
-[ext_resource type="Texture2D" uid="uid://caxsq38xbwbwk" path="res://LEADERBOARD/ASSETS/DECOR/Border.png" id="2_lc0na"]
 [ext_resource type="Texture2D" uid="uid://b3xief5py23b3" path="res://LEADERBOARD/ASSETS/DECOR/Shine.png" id="2_pgqvi"]
 [ext_resource type="Script" uid="uid://bwdk2w0qid4fy" path="res://LEADERBOARD/leaderboard_manager.gd" id="2_vgjx2"]
 [ext_resource type="Script" uid="uid://cde560mkmvmxx" path="res://LEADERBOARD/shine_effect.gd" id="3_pgqvi"]
@@ -11,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="6_yb5i1"]
 [ext_resource type="Texture2D" uid="uid://bgiox6m3q5t30" path="res://LEADERBOARD/ASSETS/BUTTON/button.png" id="8_jcnf2"]
 [ext_resource type="Texture2D" uid="uid://drgqys3jlltu1" path="res://LEADERBOARD/ASSETS/BUTTON/button_hover.png" id="10_kb1wg"]
+[ext_resource type="Texture2D" uid="uid://dsyg8vnuifbcu" path="res://LEADERBOARD/ASSETS/DECOR/Border2.png" id="10_rnqp8"]
 [ext_resource type="LabelSettings" uid="uid://duqpuwm63qt2c" path="res://LEADERBOARD/THEME/leaderboard_font.tres" id="11_spgon"]
 [ext_resource type="Texture2D" uid="uid://ewvhkg4n735f" path="res://LEADERBOARD/ASSETS/BUTTON/scroll_line.png" id="13_rnqp8"]
 [ext_resource type="Texture2D" uid="uid://be06esvgkc36j" path="res://LEADERBOARD/ASSETS/BUTTON/scroll_handle.png" id="14_aglnf"]
@@ -92,6 +92,9 @@ outline_color = Color(1, 1, 1, 0.745098)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_drhm1"]
 texture = ExtResource("10_kb1wg")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnqp8"]
+texture = ExtResource("10_kb1wg")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ek7g1"]
 texture = ExtResource("8_jcnf2")
 
@@ -145,7 +148,7 @@ rest_length = 160.0
 shape = SubResource("CircleShape2D_pgqvi")
 
 [node name="LeaderBoardNode" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(953, 272)
+position = Vector2(956, 358)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -166,7 +169,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode2" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(975, 399)
+position = Vector2(978, 485)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -187,7 +190,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode3" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(959, 534)
+position = Vector2(962, 620)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -208,7 +211,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode4" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(959, 667)
+position = Vector2(962, 753)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -229,7 +232,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode5" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(959, 800)
+position = Vector2(962, 886)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -250,7 +253,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode6" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(961, 926)
+position = Vector2(964, 1012)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -271,7 +274,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode7" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(955, 1078)
+position = Vector2(958, 1164)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -292,7 +295,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode8" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(944, 1211)
+position = Vector2(947, 1297)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -313,7 +316,7 @@ length = 5.0
 damping = 0.8
 
 [node name="LeaderBoardNode9" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(967, 1345)
+position = Vector2(970, 1431)
 JoinL = NodePath("Joint2DLeft")
 JoinR = NodePath("Joint2DRight")
 
@@ -333,9 +336,1898 @@ disable_collision = false
 length = 5.0
 damping = 0.8
 
-[node name="LeaderBoardNode10" parent="LeaderboardManager" groups=["panel"] instance=ExtResource("4_urau1")]
-position = Vector2(959, 1479)
-mass = 0.6
+[node name="LeaderBoardNode10" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(970, 1431)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode10"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode11")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode10"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode11")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode11" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(966, 1560)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode11"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode12")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode11"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode12")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode12" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(965, 1690)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode12"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode13")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode12"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode13")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode13" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(963, 1825)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode13"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode14")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode13"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode14")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode14" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(967, 1959)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode14"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode15")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode14"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode15")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode15" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(967, 2097)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode15"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode16")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode15"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode16")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode16" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(965, 2235)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode16"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode17")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode16"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode17")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode17" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(965, 2368)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode17"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode18")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode17"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode18")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode18" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(970, 2509)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode18"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode19")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode18"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode19")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode19" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(970, 2650)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode19"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode20")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode19"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode20")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode20" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(966, 2794)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode20"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode21")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode20"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode21")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode21" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(962, 2935)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode21"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode22")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode21"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode22")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode22" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(962, 3075)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode22"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode23")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode22"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode23")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode23" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(959, 3216)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode23"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode24")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode23"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode24")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode24" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(959, 3360)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode24"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode25")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode24"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode25")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode25" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(959, 3501)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode25"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode26")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode25"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode26")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode26" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 3637)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode26"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode27")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode26"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode27")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode27" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 3785)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode27"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode28")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode27"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode28")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode28" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(970, 3943)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode28"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode29")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode28"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode29")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode29" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 4090)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode29"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode30")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode29"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode30")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode30" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(963, 4227)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode30"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode31")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode30"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode31")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode31" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(965, 4364)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode31"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode32")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode31"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode32")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode32" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(965, 4499)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode32"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode33")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode32"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode33")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode33" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(967, 4639)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode33"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode34")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode33"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode34")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode34" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(969, 4776)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode34"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode35")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode34"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode35")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode35" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(971, 4917)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode35"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode36")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode35"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode36")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode36" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(969, 5054)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode36"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode37")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode36"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode37")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode37" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 5191)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode37"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode38")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode37"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode38")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode38" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 5328)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode38"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode39")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode38"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode39")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode39" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(963, 5465)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode39"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode40")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode39"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode40")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode40" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 5599)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode40"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode41")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode40"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode41")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode41" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 5741)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode41"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode42")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode41"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode42")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode42" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 5876)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode42"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode43")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode42"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode43")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode43" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 6010)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode43"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode44")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode43"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode44")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode44" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 6145)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode44"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode45")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode44"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode45")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode45" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 6286)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode45"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode46")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode45"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode46")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode46" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 6428)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode46"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode47")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode46"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode47")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode47" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 6565)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode47"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode48")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode47"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode48")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode48" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(959, 6702)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode48"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode49")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode48"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode49")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode49" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(959, 6839)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode49"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode50")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode49"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode50")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode50" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 6979)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode50"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode51")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode50"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode51")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode51" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 7117)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode51"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode52")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode51"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode52")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode52" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 7255)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode52"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode53")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode52"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode53")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode53" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(950, 7394)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode53"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode54")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode53"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode54")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode54" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(967, 7532)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode54"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode55")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode54"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode55")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode55" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 7673)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode55"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode56")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode55"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode56")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode56" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(964, 7811)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode56"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode57")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode56"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode57")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode57" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 7953)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode57"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode58")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode57"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode58")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode58" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(950, 8091)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode58"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode59")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode58"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode59")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode59" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 8232)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode59"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode60")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode59"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode60")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode60" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 8374)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode60"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode61")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode60"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode61")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode61" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(954, 8512)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode61"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode62")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode61"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode62")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode62" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 8654)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode62"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode63")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode62"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode63")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode63" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 8795)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode63"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode64")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode63"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode64")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode64" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(960, 8933)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode64"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode65")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode64"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode65")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode65" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9071)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode65"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode66")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode65"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode66")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode66" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9213)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode66"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode67")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode66"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode67")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode67" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9351)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode67"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode68")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode67"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode68")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode68" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9490)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode68"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode69")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode68"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode69")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode69" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9610)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode69"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode70")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode69"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode70")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode70" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9741)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode70"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode71")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode70"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode71")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode71" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9877)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode71"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode72")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode71"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode72")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode72" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 9991)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode72"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode73")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode72"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode73")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode73" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 10117)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode73"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode74")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode73"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode74")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode74" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(953, 10242)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode74"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode75")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode74"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode75")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode75" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 10360)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode75"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode76")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode75"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode76")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode76" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 10477)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode76"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode77")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode76"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode77")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode77" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 10603)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode77"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode78")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode77"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode78")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode78" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(949, 10724)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode78"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode79")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode78"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode79")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode79" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 10846)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode79"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode80")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode79"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode80")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode80" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(946, 10967)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode80"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode81")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode80"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode81")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode81" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 11089)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode81"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode82")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode81"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode82")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode82" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 11210)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode82"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode83")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode82"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode83")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode83" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 11341)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode83"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode84")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode83"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode84")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode84" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(949, 11470)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode84"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode85")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode84"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode85")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode85" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 11600)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode85"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode86")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode85"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode86")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode86" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 11735)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode86"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode87")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode86"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode87")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode87" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(951, 11863)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode87"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode88")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode87"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode88")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode88" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 11998)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode88"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode89")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode88"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode89")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode89" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 12138)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode89"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode90")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode89"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode90")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode90" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 12279)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode90"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode91")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode90"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode91")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode91" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 12413)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode91"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode92")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode91"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode92")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode92" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 12548)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode92"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode93")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode92"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode93")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode93" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(951, 12683)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode93"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode94")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode93"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode94")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode94" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(951, 12817)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode94"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode95")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode94"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode95")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode95" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(951, 12945)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode95"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode96")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode95"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode96")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode96" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(951, 13074)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode96"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode97")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode96"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode97")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode97" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(945, 13196)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode97"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode98")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode97"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode98")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode98" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(951, 13319)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode98"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode99")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode98"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode99")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode99" parent="LeaderboardManager" node_paths=PackedStringArray("JoinL", "JoinR") groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 13449)
+JoinL = NodePath("Joint2DLeft")
+JoinR = NodePath("Joint2DRight")
+
+[node name="Joint2DLeft" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode99"]
+position = Vector2(-217, -4)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode100")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="Joint2DRight" type="DampedSpringJoint2D" parent="LeaderboardManager/LeaderBoardNode99"]
+position = Vector2(205, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../LeaderBoardNode100")
+disable_collision = false
+length = 5.0
+damping = 0.8
+
+[node name="LeaderBoardNode100" parent="LeaderboardManager" groups=["panel"] instance=ExtResource("4_urau1")]
+position = Vector2(957, 13590)
 joined = false
 
 [node name="LeaderBoardCamera" type="Camera2D" parent="."]
@@ -365,11 +2257,12 @@ value = 2000.0
 rounded = true
 scrollable = false
 
-[node name="FloorLimit" type="StaticBody2D" parent="."]
-position = Vector2(960, 3025)
+[node name="FloorLimit KO" type="StaticBody2D" parent="."]
+position = Vector2(960, 20000)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorLimit"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorLimit KO"]
 shape = SubResource("WorldBoundaryShape2D_jcnf2")
+disabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -409,7 +2302,7 @@ top_level = true
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
-texture = ExtResource("2_lc0na")
+texture = ExtResource("10_rnqp8")
 
 [node name="Label" type="Label" parent="CanvasLayer/Border"]
 layout_mode = 1
@@ -439,6 +2332,7 @@ offset_bottom = -175.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/hover = SubResource("StyleBoxTexture_drhm1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rnqp8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ek7g1")
 
 [node name="Label" type="Label" parent="CanvasLayer/MenuButton"]
