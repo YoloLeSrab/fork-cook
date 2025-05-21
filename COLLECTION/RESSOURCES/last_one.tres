@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://by2ipf4bqwjgs"]
+
+[ext_resource type="Script" uid="uid://b2hor4wpq0ir8" path="res://COLLECTION/RESSOURCES/character_res.gd" id="1_f5n7x"]
+[ext_resource type="Texture2D" uid="uid://ci31dwaeyqn1x" path="res://COLLECTION/ASSETS/SPRITES/ForkSpriteSheet.png" id="2_5hd4j"]
+
+[resource]
+script = ExtResource("1_f5n7x")
+id = 2
+name = "Fork n3"
+description = "blablabla insane wtf"
+sprite_sheet = ExtResource("2_5hd4j")
+is_unlocked = false
+password = "unlock"
+is_selected = false
+metadata/_custom_type_script = "uid://b2hor4wpq0ir8"

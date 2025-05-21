@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://bka2h7sn0l0ha"]
+
+[ext_resource type="Script" uid="uid://b2hor4wpq0ir8" path="res://COLLECTION/RESSOURCES/character_res.gd" id="1_2yo64"]
+[ext_resource type="Texture2D" uid="uid://ci31dwaeyqn1x" path="res://COLLECTION/ASSETS/SPRITES/ForkSpriteSheet.png" id="2_yapbq"]
+
+[resource]
+script = ExtResource("1_2yo64")
+id = 0
+name = "Classique"
+description = "The OG forkito, most elegant amongst forks."
+sprite_sheet = ExtResource("2_yapbq")
+is_unlocked = true
+password = ""
+is_selected = true
+metadata/_custom_type_script = "uid://b2hor4wpq0ir8"

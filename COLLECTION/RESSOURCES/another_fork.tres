@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://ccubhu3gkmo6w"]
+
+[ext_resource type="Script" uid="uid://b2hor4wpq0ir8" path="res://COLLECTION/RESSOURCES/character_res.gd" id="1_4eqmt"]
+[ext_resource type="Texture2D" uid="uid://ci31dwaeyqn1x" path="res://COLLECTION/ASSETS/SPRITES/ForkSpriteSheet.png" id="2_aw8q5"]
+
+[resource]
+script = ExtResource("1_4eqmt")
+id = 1
+name = "Mysterious fork"
+description = "does look a lot like the previous fork"
+sprite_sheet = ExtResource("2_aw8q5")
+is_unlocked = false
+password = "unlock"
+is_selected = false
+metadata/_custom_type_script = "uid://b2hor4wpq0ir8"
