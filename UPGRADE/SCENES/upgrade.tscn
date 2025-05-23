@@ -1,0 +1,139 @@
+[gd_scene load_steps=12 format=3 uid="uid://cxhe2p8kcqe1"]
+
+[ext_resource type="Texture2D" uid="uid://tqqbingc7ylt" path="res://UPGRADE/ASSETS/DECOR/BACKGROUND.png" id="1_i5fkr"]
+[ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="2_qy0bh"]
+[ext_resource type="PackedScene" uid="uid://cd3vaw6j84eri" path="res://UPGRADE/SCENES/menu_panel.tscn" id="3_i5fkr"]
+[ext_resource type="Script" uid="uid://bxqplpofpmibi" path="res://UPGRADE/SCRIPTS/menu_manager.gd" id="3_qy0bh"]
+[ext_resource type="Script" uid="uid://qf7w5qthyptb" path="res://UPGRADE/RESSOURCES/menu_data.gd" id="4_1vove"]
+[ext_resource type="Resource" uid="uid://ty75as57dpcr" path="res://UPGRADE/RESSOURCES/menu0.tres" id="5_2y482"]
+[ext_resource type="Resource" uid="uid://dqclgmwhb83vv" path="res://UPGRADE/RESSOURCES/menu1.tres" id="6_ioc5t"]
+[ext_resource type="Resource" uid="uid://d4j8an1ufbtqb" path="res://UPGRADE/RESSOURCES/menu2.tres" id="7_mstwh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1amgc"]
+font = ExtResource("2_qy0bh")
+font_size = 48
+font_color = Color(0.188235, 0.0235294, 0.0705882, 0.87451)
+outline_size = 40
+outline_color = Color(1, 1, 1, 0.576471)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_offset = Vector2(1.52, 4.83)
+
+[sub_resource type="Shader" id="Shader_x0nev"]
+code = "shader_type canvas_item;
+
+uniform float vignette_intensity = 0.4;
+uniform float vignette_opacity : hint_range(0.0, 1.0) = 0.5;
+uniform vec4 vignette_rgb : source_color = vec4(0.0, 0.0, 0.0, 1.0);
+
+uniform sampler2D screen_vec : hint_screen_texture;
+
+float vignette(vec2 uv){
+	uv *= 1.0 - uv.xy;
+	float vignette = uv.x * uv.y * 15.0;
+	return pow(vignette, vignette_intensity * vignette_opacity);
+}
+
+void fragment(){
+	vec4 color = texture(screen_vec, SCREEN_UV);
+	vec4 text = texture(TEXTURE, UV);
+	
+	text.rgba *= (vignette_rgb.rgba);
+	text.rgba *= (1.0 - vignette(UV));
+	
+	COLOR = vec4((text.rgb)*color.rgb,text.a);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1vove"]
+shader = SubResource("Shader_x0nev")
+shader_parameter/vignette_intensity = 0.14
+shader_parameter/vignette_opacity = 0.648
+shader_parameter/vignette_rgb = Color(0, 0, 0, 0.690196)
+
+[node name="UPGRADE" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i5fkr")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.011
+offset_left = -344.0
+offset_top = 70.0
+offset_right = 342.0
+offset_bottom = 267.12
+grow_horizontal = 2
+text = "Choose a menu"
+label_settings = SubResource("LabelSettings_1amgc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MenuManager" type="Node" parent="."]
+script = ExtResource("3_qy0bh")
+available_menus = Array[ExtResource("4_1vove")]([ExtResource("5_2y482"), ExtResource("6_ioc5t"), ExtResource("7_mstwh")])
+
+[node name="MenuContainer" type="Node2D" parent="MenuManager"]
+
+[node name="MenuPanel2" parent="MenuManager/MenuContainer" instance=ExtResource("3_i5fkr")]
+position = Vector2(961, 673)
+
+[node name="SelectionButton2" type="Button" parent="MenuManager/MenuContainer/MenuPanel2"]
+offset_left = -248.0
+offset_top = -301.0
+offset_right = 256.0
+offset_bottom = 290.0
+focus_mode = 0
+flat = true
+
+[node name="MenuPanel1" parent="MenuManager/MenuContainer" instance=ExtResource("3_i5fkr")]
+position = Vector2(402, 673)
+
+[node name="SelectionButton1" type="Button" parent="MenuManager/MenuContainer/MenuPanel1"]
+offset_left = -245.0
+offset_top = -301.0
+offset_right = 259.0
+offset_bottom = 290.0
+focus_mode = 0
+flat = true
+
+[node name="MenuPanel3" parent="MenuManager/MenuContainer" instance=ExtResource("3_i5fkr")]
+position = Vector2(1538, 673)
+
+[node name="SelectionButton3" type="Button" parent="MenuManager/MenuContainer/MenuPanel3"]
+offset_left = -246.0
+offset_top = -300.0
+offset_right = 258.0
+offset_bottom = 291.0
+focus_mode = 0
+flat = true
+
+[node name="Vignette" type="ColorRect" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_1vove")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0923971, 0.0923971, 0.0923971, 1)
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

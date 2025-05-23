@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MenuData" load_steps=2 format=3 uid="uid://dqclgmwhb83vv"]
+
+[ext_resource type="Script" uid="uid://qf7w5qthyptb" path="res://UPGRADE/RESSOURCES/menu_data.gd" id="1_cqivv"]
+
+[resource]
+script = ExtResource("1_cqivv")
+name = "Forky Speed"
+description = "Augmente la vitesse de Forkito"
+level = 1
+max_level = 3
+effects = Array[String](["todo", "Multi : x1.5 (+ 0.5)", "todo"])
+metadata/_custom_type_script = "uid://qf7w5qthyptb"
