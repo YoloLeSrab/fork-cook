@@ -1,0 +1,229 @@
+[gd_scene load_steps=13 format=3 uid="uid://dmjgqj122q5vm"]
+
+[ext_resource type="Script" uid="uid://bp1mm0r13hyq8" path="res://PAUSE/SCRIPT/pause.gd" id="1_28fen"]
+[ext_resource type="Texture2D" uid="uid://ce0as6ynxebee" path="res://DEATH/ASSETS/death_panel.png" id="2_a2ptw"]
+[ext_resource type="Texture2D" uid="uid://c6uf076x1s8ap" path="res://PAUSE/ASSETS/pause_next.png" id="3_0um0a"]
+[ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="4_r7irf"]
+[ext_resource type="Texture2D" uid="uid://ewjf6t1j22i2" path="res://DEATH/ASSETS/death_button.png" id="5_an0l0"]
+[ext_resource type="Shader" uid="uid://cqld46l6c4xkp" path="res://DEATH/SHADERS/blur.gdshader" id="6_f51pu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3lp1"]
+font = ExtResource("4_r7irf")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmr2h"]
+font = ExtResource("4_r7irf")
+font_size = 32
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wmr2h"]
+texture = ExtResource("5_an0l0")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56rgi"]
+texture = ExtResource("5_an0l0")
+
+[sub_resource type="LabelSettings" id="LabelSettings_56rgi"]
+font = ExtResource("4_r7irf")
+font_size = 32
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.384314)
+shadow_offset = Vector2(1.925, 1.295)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f0m10"]
+shader = ExtResource("6_f51pu")
+shader_parameter/blur_amount = 2.0
+shader_parameter/mix_amount = 0.2
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[node name="PAUSE" type="Control"]
+top_level = true
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28fen")
+
+[node name="Panel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1080.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(958, 570)
+texture = ExtResource("2_a2ptw")
+
+[node name="NextTexture" type="TextureRect" parent="Panel"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0um0a")
+
+[node name="NextLabel" type="Label" parent="Panel/NextTexture"]
+z_index = 1
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 445.0
+offset_right = 1291.0
+offset_bottom = 524.0
+rotation = -0.259779
+text = "Next : XXXXXX"
+label_settings = SubResource("LabelSettings_y3lp1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MancheLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 249.0
+offset_right = 1183.0
+offset_bottom = 334.0
+text = "Manche : XX"
+label_settings = SubResource("LabelSettings_wmr2h")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="ScoreLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 379.0
+offset_right = 1183.0
+offset_bottom = 464.0
+text = "Score : XX"
+label_settings = SubResource("LabelSettings_wmr2h")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="UpgradesManager" type="Control" parent="Panel"]
+clip_contents = true
+anchors_preset = 0
+offset_left = 743.0
+offset_top = 556.0
+offset_right = 1389.0
+offset_bottom = 844.0
+pivot_offset = Vector2(209.573, 144.854)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/UpgradesManager"]
+custom_minimum_size = Vector2(450, 240)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 20.0001
+offset_right = -191.0
+offset_bottom = -27.9999
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(214.405, 148.075)
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/UpgradesManager/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="RestartButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 869.0
+offset_top = 820.0
+offset_right = 1063.0
+offset_bottom = 979.0
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_56rgi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_56rgi")
+
+[node name="RestartLabel" type="Label" parent="Panel/RestartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "restart"
+label_settings = SubResource("LabelSettings_56rgi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 838.0
+offset_right = 879.0
+offset_bottom = 997.0
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_56rgi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_56rgi")
+
+[node name="MenuLabel" type="Label" parent="Panel/MenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "menu"
+label_settings = SubResource("LabelSettings_56rgi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlatsButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 838.0
+offset_right = 1244.0
+offset_bottom = 997.0
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_56rgi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_56rgi")
+
+[node name="PlatLabel" type="Label" parent="Panel/PlatsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "plats"
+label_settings = SubResource("LabelSettings_56rgi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BLUR" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="BLUR"]
+material = SubResource("ShaderMaterial_f0m10")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
