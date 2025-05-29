@@ -1,0 +1,218 @@
+[gd_scene load_steps=12 format=3 uid="uid://udi2jbj6o5w8"]
+
+[ext_resource type="Script" uid="uid://ssts34lwseii" path="res://DEATH/SCRIPTS/death.gd" id="1_531me"]
+[ext_resource type="Texture2D" uid="uid://ce0as6ynxebee" path="res://DEATH/ASSETS/death_panel.png" id="1_lf77f"]
+[ext_resource type="PackedScene" uid="uid://blum6u4sfp5ru" path="res://DEATH/SCENES/upgrade_memo.tscn" id="2_531me"]
+[ext_resource type="Texture2D" uid="uid://ewjf6t1j22i2" path="res://DEATH/ASSETS/death_button.png" id="4_4868a"]
+[ext_resource type="Shader" uid="uid://cqld46l6c4xkp" path="res://DEATH/SHADERS/blur.gdshader" id="5_f0m10"]
+[ext_resource type="FontFile" uid="uid://ds0wljn1e2by1" path="res://MENU/THEMES/Pulang.otf" id="5_wmr2h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmr2h"]
+font = ExtResource("5_wmr2h")
+font_size = 32
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wmr2h"]
+texture = ExtResource("4_4868a")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56rgi"]
+texture = ExtResource("4_4868a")
+
+[sub_resource type="LabelSettings" id="LabelSettings_56rgi"]
+font = ExtResource("5_wmr2h")
+font_size = 32
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.384314)
+shadow_offset = Vector2(1.925, 1.295)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f0m10"]
+shader = ExtResource("5_f0m10")
+shader_parameter/blur_amount = 2.0
+shader_parameter/mix_amount = 0.2
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[node name="DEATH" type="Control"]
+top_level = true
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_531me")
+
+[node name="Panel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1080.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(958, 570)
+texture = ExtResource("1_lf77f")
+
+[node name="MancheLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 249.0
+offset_right = 1183.0
+offset_bottom = 334.0
+text = "Final manche : XX"
+label_settings = SubResource("LabelSettings_wmr2h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 379.0
+offset_right = 1183.0
+offset_bottom = 464.0
+text = "Final score : XX"
+label_settings = SubResource("LabelSettings_wmr2h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradesManager" type="Control" parent="Panel"]
+clip_contents = true
+anchors_preset = 0
+offset_left = 743.0
+offset_top = 556.0
+offset_right = 1389.0
+offset_bottom = 844.0
+pivot_offset = Vector2(209.573, 144.854)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/UpgradesManager"]
+custom_minimum_size = Vector2(450, 240)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 20.0001
+offset_right = -191.0
+offset_bottom = -27.9999
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(214.405, 148.075)
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/UpgradesManager/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="UpgradeMemo" parent="Panel/UpgradesManager/ScrollContainer/VBoxContainer" instance=ExtResource("2_531me")]
+layout_mode = 2
+
+[node name="UpgradeMemo2" parent="Panel/UpgradesManager/ScrollContainer/VBoxContainer" instance=ExtResource("2_531me")]
+layout_mode = 2
+
+[node name="UpgradeMemo3" parent="Panel/UpgradesManager/ScrollContainer/VBoxContainer" instance=ExtResource("2_531me")]
+layout_mode = 2
+
+[node name="UpgradeMemo4" parent="Panel/UpgradesManager/ScrollContainer/VBoxContainer" instance=ExtResource("2_531me")]
+layout_mode = 2
+
+[node name="UpgradeMemo5" parent="Panel/UpgradesManager/ScrollContainer/VBoxContainer" instance=ExtResource("2_531me")]
+layout_mode = 2
+
+[node name="UpgradeMemo6" parent="Panel/UpgradesManager/ScrollContainer/VBoxContainer" instance=ExtResource("2_531me")]
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 869.0
+offset_top = 820.0
+offset_right = 1063.0
+offset_bottom = 979.0
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_56rgi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_56rgi")
+
+[node name="RestartLabel" type="Label" parent="Panel/RestartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "restart"
+label_settings = SubResource("LabelSettings_56rgi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 838.0
+offset_right = 879.0
+offset_bottom = 997.0
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_56rgi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_56rgi")
+
+[node name="MenuLabel" type="Label" parent="Panel/MenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "menu"
+label_settings = SubResource("LabelSettings_56rgi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlatsButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 838.0
+offset_right = 1244.0
+offset_bottom = 997.0
+focus_mode = 0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wmr2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_56rgi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_56rgi")
+
+[node name="PlatLabel" type="Label" parent="Panel/PlatsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "plats"
+label_settings = SubResource("LabelSettings_56rgi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BLUR" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="BLUR"]
+material = SubResource("ShaderMaterial_f0m10")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
